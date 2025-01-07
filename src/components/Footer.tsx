@@ -1,9 +1,19 @@
 import { Link } from 'react-router-dom';
 import { Plane, Mail, Phone, MapPin } from 'lucide-react';
+import { Button } from './ui/button';
+import { toast } from './ui/use-toast';
 
 const Footer = () => {
+  const handleNewsletterSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    toast({
+      title: "Success!",
+      description: "You've been subscribed to our newsletter.",
+    });
+  };
+
   return (
-    <footer className="bg-primary/50 backdrop-blur-lg text-white mt-20">
+    <footer className="bg-deep-blue text-white mt-20">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
@@ -46,11 +56,20 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
             <p className="text-gray-300 mb-4">Stay updated with our latest news and updates.</p>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="w-full px-4 py-2 rounded bg-white/10 border border-white/20 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary"
-            />
+            <form onSubmit={handleNewsletterSubmit} className="space-y-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="w-full px-4 py-2 rounded bg-white/10 border border-white/20 text-white placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-secondary"
+              />
+              <Button 
+                type="submit"
+                variant="secondary"
+                className="w-full"
+              >
+                Subscribe
+              </Button>
+            </form>
           </div>
         </div>
         
