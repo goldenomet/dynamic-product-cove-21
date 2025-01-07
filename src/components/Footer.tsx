@@ -18,13 +18,14 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4">Ready to Transform Your Aircraft Maintenance?</h2>
+              <h2 className="text-3xl font-bold mb-4">Partner with ReliabilityIQ</h2>
               <p className="text-lg text-muted-foreground mb-6">
-                Join leading airlines in revolutionizing their maintenance operations with AI-powered solutions.
+                Join our network of industry leaders and innovators. We're seeking strategic partnerships 
+                to revolutionize aircraft maintenance together. Let's collaborate to shape the future of aviation.
               </p>
               <Link to="/contact">
                 <Button variant="secondary" className="group">
-                  Get Started Today
+                  Become a Partner
                   <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </Link>
@@ -33,7 +34,7 @@ const Footer = () => {
               <div className="absolute inset-0 bg-gradient-to-r from-deep-blue/20 to-transparent rounded-lg" />
               <img 
                 src="/placeholder.svg" 
-                alt="Aircraft Maintenance" 
+                alt="Partnership Opportunities" 
                 className="rounded-lg shadow-xl"
               />
             </div>
