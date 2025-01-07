@@ -22,8 +22,8 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
-              <h2 className="text-3xl font-bold mb-4">Partner with ReliabilityIQ</h2>
-              <p className="text-lg text-muted-foreground mb-6">
+              <h2 className="text-3xl font-bold mb-4 text-white">Partner with ReliabilityIQ</h2>
+              <p className="text-lg text-white mb-6">
                 Join our network of industry leaders and innovators. We're seeking strategic partnerships 
                 to revolutionize aircraft maintenance together. Let's collaborate to shape the future of aviation.
               </p>
