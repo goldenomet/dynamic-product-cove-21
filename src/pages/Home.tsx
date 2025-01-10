@@ -32,11 +32,18 @@ const Home = () => {
             >
               Get Started <ArrowRight className="ml-2" />
             </Link>
+            
+            <div className="mt-12">
+              <img
+                src="https://images.unsplash.com/photo-1436491865332-7a61a109cc05?auto=format&fit=crop&w=1400&h=800&q=80"
+                alt="Boeing Aircraft"
+                className="rounded-lg shadow-2xl mx-auto"
+              />
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Image Carousel Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto text-center mb-12">
           <h2 className="text-3xl font-bold text-white mb-4">Our Technology in Action</h2>

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Menu, X, Plane } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
+import AirplaneLogo from '../assets/airplane-logo.svg';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,9 +11,19 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2 text-xl font-bold text-white">
-              <Plane className="h-6 w-6 text-secondary" />
-              <span>ReliabilityIQ</span>
+            <Link to="/" className="flex items-center space-x-2">
+              <div className="relative h-10 w-10">
+                <img 
+                  src={AirplaneLogo}
+                  alt="ReliabilityIQ Logo" 
+                  className="h-10 w-10 p-1 rounded-full bg-white/10 border-2 border-secondary shadow-lg shadow-secondary/20"
+                />
+                <div className="absolute inset-0 bg-gradient-to-tr from-secondary/20 to-transparent rounded-full"></div>
+              </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-bold text-white">ReliabilityIQ</span>
+                <span className="text-xs text-secondary/80">Aircraft Intelligence</span>
+              </div>
             </Link>
           </div>
           

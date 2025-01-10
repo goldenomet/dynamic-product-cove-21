@@ -8,8 +8,8 @@ import {
 
 const images = [
   {
-    url: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
-    alt: "Aircraft Engine Monitoring Software",
+    url: "https://images.unsplash.com/photo-1540962351504-03099e0a754b",
+    alt: "Aircraft Dashboard",
     caption: "Advanced Monitoring Systems"
   },
   {

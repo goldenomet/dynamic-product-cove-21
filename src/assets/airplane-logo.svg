@@ -1,0 +1,11 @@
+<svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clouds -->
+  <path d="M5 25C5 22.2386 7.23858 20 10 20C11.1547 20 12.2289 20.3596 13.1213 21C14.4147 18.6667 16.8284 17 19.5 17C22.8137 17 25.5 19.6863 25.5 23" stroke="#0D9488" stroke-width="2"/>
+  <path d="M15 28C15 25.2386 17.2386 23 20 23C21.1547 23 22.2289 23.3596 23.1213 24C24.4147 21.6667 26.8284 20 29.5 20C32.8137 20 35.5 22.6863 35.5 26" stroke="#0D9488" stroke-width="2"/>
+  
+  <!-- Airplane -->
+  <path d="M8 15L32 15L28 12H12L8 15Z" stroke="#1E293B" stroke-width="2"/> <!-- Wings -->
+  <path d="M18 10L22 10L20 8L18 10Z" stroke="#1E293B" stroke-width="2"/> <!-- Tail -->
+  <path d="M19 8L21 8L20 5L19 8Z" stroke="#1E293B" stroke-width="2"/> <!-- Vertical stabilizer -->
+  <path d="M15 18L25 18L23 15H17L15 18Z" stroke="#1E293B" stroke-width="2"/> <!-- Fuselage -->
+</svg>
