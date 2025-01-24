@@ -8,6 +8,7 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import Product from "./pages/Product";
 import Contact from "./pages/Contact";
+import InteractiveDemo from "./pages/InteractiveDemo";
 
 const queryClient = new QueryClient();
 
@@ -17,13 +18,14 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
-        <div className="flex flex-col min-h-screen">
+        <div className="flex flex-col min-h-screen w-full">
           <Navbar />
           <div className="flex-grow pt-16">
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/product" element={<Product />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/interactive-demo" element={<InteractiveDemo />} />
             </Routes>
           </div>
           <Footer />
