@@ -3,9 +3,11 @@ import { Button } from "./ui/button";
 import { Input } from "./ui/input";
 import { ArrowRight } from "lucide-react";
 import { useToast } from "./ui/use-toast";
+import { useState } from "react";
 
 const Footer = () => {
   const { toast } = useToast();
+  const [email, setEmail] = useState("");
 
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -13,6 +15,7 @@ const Footer = () => {
       title: "Success!",
       description: "Thank you for subscribing to our newsletter.",
     });
+    setEmail(""); // Reset the email input
   };
 
   return (
@@ -71,12 +74,29 @@ const Footer = () => {
             </div>
             <div>
               <h3 className="font-bold text-lg mb-4">Newsletter</h3>
-              <form onSubmit={handleNewsletterSubmit} className="space-y-4">
+              <form 
+                onSubmit={handleNewsletterSubmit} 
+                className="space-y-4"
+                name="newsletter"
+                method="POST"
+                data-netlify="true"
+                netlify-honeypot="bot-field"
+              >
+                <input type="hidden" name="form-name" value="newsletter" />
+                <input type="hidden" name="recipient" value="rufusemare66@gmail.com,goldenomet0@gmail.com" />
+                <p className="hidden">
+                  <label>
+                    Don't fill this out if you're human: <input name="bot-field" />
+                  </label>
+                </p>
                 <Input
                   type="email"
+                  name="email"
                   placeholder="Enter your email"
                   className="bg-white/10 border-white/20 text-white placeholder:text-gray-400"
                   required
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
                 <Button type="submit" variant="secondary" className="w-full">
                   Subscribe
