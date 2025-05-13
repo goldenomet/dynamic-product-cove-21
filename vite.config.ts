@@ -1,3 +1,4 @@
+
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import path from "path";
@@ -14,6 +15,9 @@ export default defineConfig(({ mode }) => ({
     mode === 'development' &&
     componentTagger(),
   ].filter(Boolean),
+  build: {
+    chunkSizeWarningLimit: 1000, // Increased from default 500kB to 1000kB
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
